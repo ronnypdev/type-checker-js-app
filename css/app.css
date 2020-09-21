@@ -62,5 +62,12 @@ input[type='text'] {
 }
 
 .output {
+  font-family: 'Faune', Arial;
   font-size: 64px;
+  width: 100%;
+  background: none;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  min-height: 100vh;
 }
