@@ -1,6 +1,10 @@
 const sentenceTag = document.querySelector(`input[type='text']`);
 const typesizeTag = document.querySelector(`input[name="typesize"]`);
 const typesizeOutPut = document.querySelector(`.typesize-output`);
+
+const lineheightTag = document.querySelector(`input[name="lineheight"]`);
+const lineheightOutput = document.querySelector(`.lineheight-output`);
+
 const outputTag = document.querySelector('.output');
 const originalText = outputTag.value;
 
@@ -26,6 +30,11 @@ function typeSizeValue(event) {
   typesizeOutPut.innerHTML = event.target.value + 'px';
 }
 
+function lineheightOutputValue(evet) {
+  outputTag.style.lineHeight = evet.target.value;
+  lineheightOutput.innerHTML = evet.target.value;
+}
+
 // sentenceValue
 sentenceTag.addEventListener('keyup', sentenceValue, false);
 
@@ -34,3 +43,6 @@ outputTag.addEventListener('keyup', outPutValue, false);
 
 // typeSizeValue
 typesizeTag.addEventListener('input', typeSizeValue, false);
+
+// lineheightOutputValue
+lineheightTag.addEventListener('input', lineheightOutputValue, false);
