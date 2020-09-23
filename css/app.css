@@ -43,6 +43,10 @@ label span {
   font-style: italic;
 }
 
+select {
+  width: 100%;
+}
+
 input[type='text'] {
   width: 100%;
   background-color: #575757;
@@ -71,13 +75,40 @@ input[type='range'] {
   margin: 20px 0 0 0;
 }
 
+.option-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .output {
-  font-family: 'Faune', Arial;
   font-size: 64px;
+  font-family: 'Poppins', 'Raleway', 'Montserrat', 'Fira Sans', 'Barlow',
+    'Kanit', 'Fira Sans Extra Condensed', 'Trirong', 'Grenze', sans-serifs;
   width: 100%;
-  background: none;
+  background: transparent;
   color: #ffffff;
   border: none;
   outline: none;
   min-height: 100vh;
+  padding: 40px;
+}
+
+.colors {
+  display: flex;
+}
+
+.colors div {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  text-align: center;
+  margin: 5px 10px 0 0;
+  transition: border 0.25s;
+  cursor: pointer;
+}
+
+.colors .selected {
+  border: 2px solid #ffffff;
 }
